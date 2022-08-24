@@ -1,0 +1,56 @@
+<!DOCTYPE HTML>
+<html>
+    <title>Art-Final</title>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+.bckpct1 {
+  text-align: center;
+  font-size: 60px;
+  margin-top:0px;
+  color:white;
+  background-image: url(https://i.gifer.com/origin/37/376a66dacbd417010b5eda0d46ada276.gif);
+  background-size:200px;
+  border-radius: 30px;
+  top:200px;
+  left:420px;
+  position:fixed;
+  width:500px;
+}
+.txtfin {
+    top:70px;
+    left:420px;
+    position:fixed;
+}
+body{
+    background-image: url(https://st4.depositphotos.com/24812156/26360/i/450/depositphotos_263606246-stock-photo-wave-white-background-abstract-white.jpg);
+    background-size: cover;
+    }
+</style>
+</head>
+<body>
+    <div class="txtfin">
+    <center><font face="sans-serif" size="30"><b>До финала осталось:</b></font></center>
+    </div>
+<div class="bckpct1">
+    <p id="demo"></p>
+<script>
+var countDownDate = new Date("Aug 28, 2022 21:00:00").getTime();
+var x = setInterval(function() {
+    var now = new Date().getTime();
+    var distance = countDownDate - now;
+    var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+    var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+    document.getElementById("demo").innerHTML = days + "d " + hours + "h "
+    + minutes + "m " + seconds + "s ";
+    if (distance < 0) {
+        clearInterval(x);
+        document.getElementById("demo").innerHTML = "!FINAL!";
+    }
+}, 1000);
+</script>
+</div>
+</body>
+</html>
